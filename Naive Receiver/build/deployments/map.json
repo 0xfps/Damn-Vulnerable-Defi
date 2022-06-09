@@ -1,0 +1,13 @@
+{
+  "4": {
+    "Attack": [
+      "0x7b14d5faFAF71F5449fC3e5c2ff1425c6a1929B6"
+    ],
+    "FlashLoanReceiver": [
+      "0xc2af7AaB1375370Be4b1cE812a8B5F2c3e231b34"
+    ],
+    "NaiveReceiverLenderPool": [
+      "0xE5A0AB4753f5d3D4b3f09f2b944d275e3EDA2942"
+    ]
+  }
+}
