@@ -1,2 +1,3 @@
 # Damn-Vulnerable-Defi
-A hack of all the smart contract CTFs listed on https://www.damnvulnerabledefi.xyz/
+
+A list of all smart contract exploits successfully carried out on the smart contract security hackathon at [Damn Vulnerabe Defi](https://www.damnvulnerabledefi.xyz/)
