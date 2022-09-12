@@ -5,7 +5,7 @@ import "./SideEntranceLenderPool.sol";
 
 /*
 * @title: 
-* @author: Anthony (fps) https://github.com/fps8k .
+* @author: Anthony (fps) https://github.com/0xfps.
 * @dev: 
 */
 contract Attack {
